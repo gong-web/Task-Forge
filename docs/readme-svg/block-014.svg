@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="848" viewBox="0 0 1600 848" preserveAspectRatio="xMinYMin meet">
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <foreignObject x="0" y="0" width="100%" height="100%">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: serif; font-size: 14px; color: #111; margin: 0; padding: 16px; line-height: 1.4;">
+<table style="width:100%;border-collapse:collapse;font-family:serif;background:#fff;border:1px solid #333;margin:8px 0;">
+<caption style="caption-side:top;text-align:center;padding:8px 0;font-size:13px;font-weight:bold;color:#1a1a1a;">payload() 输出字段与约束</caption>
+<tr>
+<td style="width:50%;padding:0;vertical-align:top;border-right:2px solid #1a1a1a;">
+<table style="width:100%;border-collapse:collapse;">
+<tr style="background:#1a1a1a;color:#fff;">
+<th style="padding:8px 14px;font-size:11px;border-right:1px solid #555;">字段</th>
+<th style="padding:8px 14px;font-size:11px;">类型</th>
+</tr>
+<tr style="background:#f5f5f5;"><td style="padding:7px 14px;font-size:11px;border-right:1px solid #ccc;"><code>title</code></td><td style="padding:7px 14px;font-size:11px;"><code>str</code></td></tr>
+<tr><td style="padding:7px 14px;font-size:11px;border-right:1px solid #ccc;"><code>priority</code></td><td style="padding:7px 14px;font-size:11px;"><code>"高" | "中" | "低"</code></td></tr>
+<tr style="background:#f5f5f5;"><td style="padding:7px 14px;font-size:11px;border-right:1px solid #ccc;"><code>due_at</code></td><td style="padding:7px 14px;font-size:11px;"><code>datetime | None</code></td></tr>
+<tr><td style="padding:7px 14px;font-size:11px;border-right:1px solid #ccc;"><code>remind_at</code></td><td style="padding:7px 14px;font-size:11px;"><code>datetime | None</code></td></tr>
+<tr style="background:#f5f5f5;"><td style="padding:7px 14px;font-size:11px;border-right:1px solid #ccc;"><code>parent_id</code></td><td style="padding:7px 14px;font-size:11px;"><code>int | None</code></td></tr>
+<tr><td style="padding:7px 14px;font-size:11px;border-right:1px solid #ccc;"><code>progress</code></td><td style="padding:7px 14px;font-size:11px;"><code>int [0, 100]</code></td></tr>
+<tr style="background:#f5f5f5;"><td style="padding:7px 14px;font-size:11px;border-right:1px solid #ccc;"><code>estimated_minutes</code></td><td style="padding:7px 14px;font-size:11px;"><code>int</code></td></tr>
+<tr><td style="padding:7px 14px;font-size:11px;border-right:1px solid #ccc;"><code>tags / category / description</code></td><td style="padding:7px 14px;font-size:11px;"><code>str</code></td></tr>
+</table>
+</td>
+<td style="width:50%;padding:0;vertical-align:top;">
+<table style="width:100%;border-collapse:collapse;">
+<tr style="background:#1a1a1a;color:#fff;">
+<th style="padding:8px 14px;font-size:11px;">实时约束函数</th>
+</tr>
+<tr style="background:#f5f5f5;"><td style="padding:8px 14px;font-size:11px;"><code>_sync_reminder_constraints()</code><br><span style="color:#666;font-size:10px;">校验 remind_at ≤ due_at，违规自动修正</span></td></tr>
+<tr><td style="padding:8px 14px;font-size:11px;"><code>_sync_due_state()</code><br><span style="color:#666;font-size:10px;">截止时间控件启用 / 禁用联动</span></td></tr>
+<tr style="background:#f5f5f5;"><td style="padding:8px 14px;font-size:11px;"><code>EditorDateTimeField</code><br><span style="color:#666;font-size:10px;">时 / 分独立滚轮 + 预设时间按钮</span></td></tr>
+<tr><td style="padding:8px 14px;font-size:11px;"><code>StarryTagEditor</code><br><span style="color:#666;font-size:10px;">流式标签输入，自动去重</span></td></tr>
+</table>
+</td>
+</tr>
+</table>
+    </div>
+  </foreignObject>
+</svg>

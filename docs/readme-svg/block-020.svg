@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="272" viewBox="0 0 1600 272" preserveAspectRatio="xMinYMin meet">
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <foreignObject x="0" y="0" width="100%" height="100%">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: serif; font-size: 14px; color: #111; margin: 0; padding: 16px; line-height: 1.4;">
+<details>
+<summary><b>验证数据库迁移健壮性</b></summary>
+<br>
+
+在缺少 `progress` 列的旧版数据库上运行 `python src/main.py`，
+`_ensure_schema()` 会自动执行 `ALTER TABLE tasks ADD COLUMN progress INTEGER DEFAULT 0`，应用正常启动。
+
+</details>
+    </div>
+  </foreignObject>
+</svg>

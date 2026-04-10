@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1112" viewBox="0 0 1600 1112" preserveAspectRatio="xMinYMin meet">
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <foreignObject x="0" y="0" width="100%" height="100%">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: serif; font-size: 14px; color: #111; margin: 0; padding: 16px; line-height: 1.4;">
+<table>
+<tr>
+<td width="33%" valign="top">
+
+**已完成**
+
+- [x] 父子 DAG 递归状态同步
+- [x] `reminder_sent` 防重复锁 + 延期补偿
+- [x] 编辑器与主窗口双回归套件
+- [x] JSON / CSV / Markdown 三格式导出
+- [x] 甘特图 / 看板 / 分析 Hub 三视图
+- [x] 自动 schema 迁移与历史库兼容
+- [x] 三套主题系统（深色/浅色/日出）
+- [x] 父子区级缩进甘特图自绘
+- [x] 专注计时器 `tracked_minutes`
+
+</td>
+<td width="33%" valign="top">
+
+**近期规划**
+
+- [ ] 重复任务规则增强
+  - [ ] Cron 表达式解析器
+  - [ ] 本地时区校准与规则预览
+- [ ] 提醒中心批量处理 UI
+- [ ] 回归脚本分组 + HTML 报告输出
+- [ ] 循环任务自动续期展示
+
+</td>
+<td width="33%" valign="top">
+
+**中长期规划**
+
+- [ ] 插件化扩展点（导入器/统计器）
+- [ ] 性能剖析面板（重绘/查询耗时）
+- [ ] 基于 $\hat{T}$ 与 $T_{\text{actual}}$ 的效率预测模型
+- [ ] 分类级别投入热力图
+- [ ] CalDAV 日历协议对接
+- [ ] 可选轻量局域网 P2P 同步
+
+</td>
+</tr>
+</table>
+    </div>
+  </foreignObject>
+</svg>

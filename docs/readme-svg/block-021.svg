@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="368" viewBox="0 0 1600 368" preserveAspectRatio="xMinYMin meet">
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <foreignObject x="0" y="0" width="100%" height="100%">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: serif; font-size: 14px; color: #111; margin: 0; padding: 16px; line-height: 1.4;">
+<details>
+<summary><b>执行完整回归并解析结果</b></summary>
+<br>
+
+```powershell
+python tests/editor_regression_suite.py
+python tests/mainwindow_regression_suite.py
+```
+
+成功判定：输出包含 `editor-regression-suite-passed:N` 与 `mainwindow-regression-suite-passed:M`
+
+</details>
+    </div>
+  </foreignObject>
+</svg>

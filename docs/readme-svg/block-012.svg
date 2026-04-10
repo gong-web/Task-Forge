@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="920" viewBox="0 0 1600 920" preserveAspectRatio="xMinYMin meet">
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <foreignObject x="0" y="0" width="100%" height="100%">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: serif; font-size: 14px; color: #111; margin: 0; padding: 16px; line-height: 1.4;">
+<table style="width:100%;border-collapse:collapse;font-family:serif;background:#fff;border:1px solid #333;margin:8px 0;">
+<caption style="caption-side:top;text-align:center;padding:8px 0;font-size:13px;font-weight:bold;color:#1a1a1a;">提醒调度时序</caption>
+<tr style="background:#1a1a1a;color:#fff;">
+<th style="padding:8px 12px;font-size:11px;text-align:center;border-right:1px solid #555;">提醒定时器<br><code>Single-shot</code></th>
+<th style="padding:8px 12px;font-size:11px;text-align:center;border-right:1px solid #555;">MainWindow</th>
+<th style="padding:8px 12px;font-size:11px;text-align:center;border-right:1px solid #555;">DB.py</th>
+<th style="padding:8px 12px;font-size:11px;text-align:center;border-right:1px solid #555;">声音引擎</th>
+<th style="padding:8px 12px;font-size:11px;text-align:center;">提醒弹窗</th>
+</tr>
+<tr style="background:#f5f5f5;">
+<td colspan="5" style="padding:8px 16px;font-size:11px;color:#1a1a1a;">
+① <code>timeout()</code> → <code>check_reminders()</code>
+</td>
+</tr>
+<tr>
+<td colspan="5" style="padding:8px 16px;font-size:11px;color:#1a1a1a;background:#fafafa;">
+② MW → DB: <code>due_reminders(current_time)</code> → 返回待提醒任务列表
+</td>
+</tr>
+<tr style="background:#f5f5f5;">
+<td colspan="5" style="padding:8px 16px;font-size:11px;color:#1a1a1a;">
+③ [存在待提醒任务] → 声音引擎: <code>_play_reminder_sound()</code> → DB: <code>mark_reminders_sent(task_ids)</code> → 弹窗: <code>_show_reminder_dialog(tasks)</code>
+</td>
+</tr>
+<tr>
+<td colspan="5" style="padding:8px 16px;font-size:11px;color:#1a1a1a;background:#fafafa;">
+④ [用户选择延期] → DB: <code>postpone_reminder(task_id, minutes)</code>（重置 <code>reminder_sent=False</code>）
+</td>
+</tr>
+<tr style="background:#f5f5f5;">
+<td colspan="5" style="padding:8px 16px;font-size:11px;color:#1a1a1a;">
+⑤ MW → DB: <code>next_pending_reminder_at()</code> → 定时器: <code>setSingleShot(True); start(delta_ms)</code>
+</td>
+</tr>
+</table>
+    </div>
+  </foreignObject>
+</svg>

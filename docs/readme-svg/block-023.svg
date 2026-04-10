@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="260" viewBox="0 0 1600 260" preserveAspectRatio="xMinYMin meet">
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <foreignObject x="0" y="0" width="100%" height="100%">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: serif; font-size: 14px; color: #111; margin: 0; padding: 16px; line-height: 1.4;">
+<details>
+<summary><b>首次启动为什么会有短暂延迟？</b></summary>
+<br>
+
+启动时 `_ensure_schema()` 执行 schema 检查，`seed_database_if_empty()` 在空库情况下植入演示数据。两个操作均为幂等，通常在 1 秒内完成。后续启动仅执行备份操作，速度更快。
+
+</details>
+    </div>
+  </foreignObject>
+</svg>

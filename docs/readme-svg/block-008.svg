@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="656" viewBox="0 0 1600 656" preserveAspectRatio="xMinYMin meet">
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <foreignObject x="0" y="0" width="100%" height="100%">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: serif; font-size: 14px; color: #111; margin: 0; padding: 16px; line-height: 1.4;">
+<table>
+<tr>
+  <th>字段</th><th>SQLAlchemy 类型</th><th>约束</th><th>语义说明</th>
+</tr>
+<tr><td><code>id</code></td><td><code>Integer</code></td><td>PK · AutoIncrement</td><td>全局唯一标识符</td></tr>
+<tr><td><code>title</code></td><td><code>String(120)</code></td><td>NOT NULL</td><td>任务标题</td></tr>
+<tr><td><code>category</code></td><td><code>String(60)</code></td><td>default="学习"</td><td>一级分类标签</td></tr>
+<tr><td><code>tags</code></td><td><code>Text</code></td><td>default=""</td><td>多标签文本（空格分隔）</td></tr>
+<tr><td><code>priority</code></td><td><code>String(10)</code></td><td>枚举：高 / 中 / 低</td><td>任务优先级</td></tr>
+<tr><td><code>due_at</code></td><td><code>DateTime</code></td><td>Nullable · Index</td><td>截止时间 $t_{\text{due}}$</td></tr>
+<tr><td><code>remind_at</code></td><td><code>DateTime</code></td><td>Nullable</td><td>提醒时间 $t_{\text{remind}}$，约束 $t_{\text{remind}} \leq t_{\text{due}}$</td></tr>
+<tr><td><code>progress</code></td><td><code>Integer</code></td><td>default=0</td><td>完成度 $P \in [0, 100]$</td></tr>
+<tr><td><code>estimated_minutes</code></td><td><code>Integer</code></td><td>default=0</td><td>预估投入时长 $\hat{T}$</td></tr>
+<tr><td><code>tracked_minutes</code></td><td><code>Integer</code></td><td>default=0</td><td>实际累计投入 $T_{\text{actual}}$</td></tr>
+<tr><td><code>recurrence_rule</code></td><td><code>String(20)</code></td><td>default="不重复"</td><td>循环规则（每天 / 每周 / 自定义）</td></tr>
+<tr><td><code>completed</code></td><td><code>Boolean</code></td><td>default=False</td><td>任务完成态标志</td></tr>
+<tr><td><code>completed_at</code></td><td><code>DateTime</code></td><td>Nullable</td><td>完成时间戳，归档时写入</td></tr>
+<tr><td><code>reminder_sent</code></td><td><code>Boolean</code></td><td>default=False</td><td>防重复互斥锁，弹窗展示后置 True</td></tr>
+<tr><td><code>sort_order</code></td><td><code>Integer</code></td><td>default=0</td><td>同级任务排序权重</td></tr>
+<tr><td><code>parent_id</code></td><td><code>Integer</code></td><td>FK(self) · Nullable · CASCADE</td><td>父任务引用，构成 DAG</td></tr>
+<tr><td><code>created_at</code></td><td><code>DateTime</code></td><td>default=now</td><td>创建时间戳</td></tr>
+<tr><td><code>updated_at</code></td><td><code>DateTime</code></td><td>onupdate=now</td><td>最后修改时间戳</td></tr>
+<tr><td><code>description</code></td><td><code>Text</code></td><td>default=""</td><td>任务详情说明</td></tr>
+</table>
+    </div>
+  </foreignObject>
+</svg>
