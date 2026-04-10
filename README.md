@@ -129,7 +129,10 @@ Task-Forge/
 
 **父节点进度聚合：**
 
-$$P_{\text{parent}} = \begin{cases} 100 & \forall\, c \in \text{children}(t),\ c.\text{completed} = \texttt{True} \\ \left\lfloor \dfrac{\sum_{c} c.P}{|\text{children}(t)|} \right\rfloor & \text{otherwise} \end{cases}$$
+$$P_{\text{parent}} = \begin{cases}
+100, & \forall c \in \operatorname{children}(t),\ c.\mathrm{completed}=\mathrm{True} \\
+\left\lfloor \dfrac{\sum_c c.P}{\lvert \operatorname{children}(t)\rvert} \right\rfloor, & \mathrm{otherwise}
+\end{cases}$$
 
 **效率偏差（分析 Hub 核心指标）：**
 
