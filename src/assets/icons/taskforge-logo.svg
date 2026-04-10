@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="orbitStroke" x1="10" y1="8" x2="54" y2="56" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#60A5FA" />
+      <stop offset="0.55" stop-color="#A78BFA" />
+      <stop offset="1" stop-color="#F472B6" />
+    </linearGradient>
+    <linearGradient id="coreFill" x1="20" y1="20" x2="44" y2="44" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F8FAFC" />
+      <stop offset="1" stop-color="#C4B5FD" />
+    </linearGradient>
+    <filter id="glow" x="0" y="0" width="64" height="64" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+  <rect x="5" y="5" width="54" height="54" rx="18" fill="#0B1220" fill-opacity="0.92" />
+  <path d="M51.5 17.5C46.8 10.1 37.4 7.3 29.3 10.7C21.1 14 16.2 22.9 17.1 31.7C17.9 40.6 24.3 48.4 32.9 50.7C41.5 53 50.8 49.1 55 41.2" stroke="url(#orbitStroke)" stroke-width="4.4" stroke-linecap="round"/>
+  <path d="M12.6 45.3C17.2 53 26.7 56.3 35.3 53.5C43.8 50.7 49.6 42.4 49.5 33.4C49.3 24.4 43 16.5 34.2 13.9C25.3 11.2 15.7 14.3 10.6 21.8" stroke="url(#orbitStroke)" stroke-width="3.2" stroke-linecap="round" stroke-opacity="0.7"/>
+  <g filter="url(#glow)">
+    <circle cx="32" cy="32" r="9" fill="url(#coreFill)" />
+    <circle cx="49.5" cy="15.5" r="4.2" fill="#F472B6" />
+    <circle cx="14.5" cy="47.5" r="3.8" fill="#60A5FA" />
+  </g>
+  <path d="M30.5 15.8C30.9 13.9 33.5 13.9 33.9 15.8L35.1 21.6C35.4 22.9 36.4 23.9 37.7 24.2L43.5 25.4C45.4 25.8 45.4 28.4 43.5 28.8L37.7 30C36.4 30.3 35.4 31.3 35.1 32.6L33.9 38.4C33.5 40.3 30.9 40.3 30.5 38.4L29.3 32.6C29 31.3 28 30.3 26.7 30L20.9 28.8C19 28.4 19 25.8 20.9 25.4L26.7 24.2C28 23.9 29 22.9 29.3 21.6L30.5 15.8Z" fill="url(#orbitStroke)"/>
+  <path d="M47 28V34" stroke="#F8FAFC" stroke-width="2.4" stroke-linecap="round"/>
+  <path d="M50 31H44" stroke="#F8FAFC" stroke-width="2.4" stroke-linecap="round"/>
+</svg>

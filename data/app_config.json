@@ -1,0 +1,11 @@
+{
+  "theme": "light",
+  "theme_id": "nebula_rose",
+  "background_id": "nebula_rose_ocean_reflection",
+  "reminder_interval_ms": 15000,
+  "default_pomodoro_minutes": 25,
+  "ai_api_base": "https://yunwu.ai/v1",
+  "ai_model": "gpt-4o",
+  "ai_api_key": "",
+  "ai_timeout_sec": 30
+}
