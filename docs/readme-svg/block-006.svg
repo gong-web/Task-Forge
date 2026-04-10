@@ -1,54 +1,30 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1208" viewBox="0 0 1600 1208" preserveAspectRatio="xMinYMin meet">
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="678" viewBox="0 0 1600 678" preserveAspectRatio="xMinYMin meet">
   <rect width="100%" height="100%" fill="#ffffff"/>
-  <foreignObject x="0" y="0" width="100%" height="100%">
-    <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: serif; font-size: 14px; color: #111; margin: 0; padding: 16px; line-height: 1.4;">
-<table style="width:100%;border-collapse:collapse;font-family:serif;background:#fff;border:2px solid #1a1a1a;margin:8px 0;">
-<caption style="caption-side:top;text-align:center;padding:8px 0;font-size:13px;font-weight:bold;color:#1a1a1a;">单向数据流 — Task Forge System</caption>
-<tr>
-<td style="padding:10px 20px;border-bottom:1px solid #ccc;background:#f0f0f0;text-align:center;font-size:11px;color:#1a1a1a;">
-<strong>表现区</strong> · PyQt6 · 25+ UI 模块<br>
-<code>TodayView | PlanView | TaskTree | HubView | GanttView | Calendar</code>
-</td>
-</tr>
-<tr><td style="text-align:center;padding:4px 0;color:#666;font-size:16px;">↓ UI 事件（点击 / 勾选 / 输入）</td></tr>
-<tr>
-<td style="padding:10px 20px;border-bottom:1px solid #ccc;background:#fafafa;text-align:center;font-size:11px;color:#1a1a1a;">
-<strong>交互区</strong> · MainWindow<br>
-<code>switch_view() &nbsp;&nbsp; refresh_everything() &nbsp;&nbsp; check_reminders()</code>
-</td>
-</tr>
-<tr><td style="text-align:center;padding:4px 0;color:#666;font-size:16px;">↓ 领域规则 · 编辑器装配 · 提醒调度</td></tr>
-<tr>
-<td style="padding:0;border-bottom:1px solid #ccc;background:#fff;">
-<table style="width:100%;border-collapse:collapse;">
-<tr>
-<td style="width:33%;padding:10px 16px;border-right:1px solid #ccc;text-align:center;font-size:11px;color:#1a1a1a;">
-<strong>领域区</strong><br><code>规则 · 约束<br>状态验证</code>
-</td>
-<td style="width:33%;padding:10px 16px;border-right:1px solid #ccc;text-align:center;font-size:11px;color:#1a1a1a;">
-<strong>TaskEditorView</strong><br><code>set_context()<br>payload() 装配</code>
-</td>
-<td style="width:34%;padding:10px 16px;text-align:center;font-size:11px;color:#1a1a1a;">
-<strong>提醒调度引擎</strong><br><code>Single-shot Timer<br>reminder_sent 锁</code>
-</td>
-</tr>
-</table>
-</td>
-</tr>
-<tr><td style="text-align:center;padding:4px 0;color:#666;font-size:16px;">↓ DB API Call</td></tr>
-<tr>
-<td style="padding:10px 20px;border-bottom:1px solid #ccc;background:#f0f0f0;text-align:center;font-size:11px;color:#1a1a1a;">
-<strong>数据区</strong> · <code>DB.py</code> (SSOT · SQLAlchemy Session)<br>
-<code>create_task | update_task | toggle_task | _refresh_parent_chain | gantt_entries | personal_analytics_snapshot</code>
-</td>
-</tr>
-<tr><td style="text-align:center;padding:4px 0;color:#666;font-size:16px;">↓ → refresh_everything() 广播</td></tr>
-<tr>
-<td style="padding:10px 20px;background:#fafafa;text-align:center;font-size:11px;color:#1a1a1a;">
-<strong>SQLite</strong> · <code>data/task_forge.db</code> + <code>.db.bak</code>（冷启动备份）
-</td>
-</tr>
-</table>
-    </div>
-  </foreignObject>
+  <style><![CDATA[
+    text { font-family: "Noto Sans SC", "Microsoft YaHei", "Segoe UI", sans-serif; font-size:11px; fill: #111; }
+  ]]></style>
+  <text x="16" y="16">单向数据流 — Task Forge System</text>
+  <text x="16" y="52">表现区 · PyQt6 · 25+ UI 模块</text>
+  <text x="16" y="88">TodayView | PlanView | TaskTree | HubView | GanttView | Calendar</text>
+  <text x="16" y="124">↓ UI 事件（点击 / 勾选 / 输入）</text>
+  <text x="16" y="160">交互区 · MainWindow</text>
+  <text x="16" y="196">switch_view()    refresh_everything()    check_reminders()</text>
+  <text x="16" y="232">↓ 领域规则 · 编辑器装配 · 提醒调度</text>
+  <text x="16" y="268">领域区</text>
+  <text x="16" y="286">规则 · 约束</text>
+  <text x="16" y="304">状态验证</text>
+  <text x="16" y="340">TaskEditorView</text>
+  <text x="16" y="358">set_context()</text>
+  <text x="16" y="376">payload() 装配</text>
+  <text x="16" y="412">提醒调度引擎</text>
+  <text x="16" y="430">Single-shot Timer</text>
+  <text x="16" y="448">reminder_sent 锁</text>
+  <text x="16" y="484">↓ DB API Call</text>
+  <text x="16" y="520">数据区 · DB.py (SSOT · SQLAlchemy Session)</text>
+  <text x="16" y="556">create_task | update_task | toggle_task | _refresh_parent_chain | gantt_entries |</text>
+  <text x="16" y="574">personal_analytics_snapshot</text>
+  <text x="16" y="610">↓ → refresh_everything() 广播</text>
+  <text x="16" y="646">SQLite · data/task_forge.db + .db.bak（冷启动备份）</text>
 </svg>
+
+

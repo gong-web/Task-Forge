@@ -1,46 +1,31 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1016" viewBox="0 0 1600 1016" preserveAspectRatio="xMinYMin meet">
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="534" viewBox="0 0 1600 534" preserveAspectRatio="xMinYMin meet">
   <rect width="100%" height="100%" fill="#ffffff"/>
-  <foreignObject x="0" y="0" width="100%" height="100%">
-    <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: serif; font-size: 14px; color: #111; margin: 0; padding: 16px; line-height: 1.4;">
-<table>
-<tr>
-<td width="50%" valign="top">
-
-### 编辑器回归套件
-
-[`tests/editor_regression_suite.py`](tests/editor_regression_suite.py)
-
-| 测试域 | 核心断言 |
-|:---|:---|
-| 布局可见性 | `set_context()` 后控件可见 |
-| 滚动行为 | 长表单滚动后目标控件仍在可视区 |
-| 时间约束 | `remind_at > due_at` 时强制修正 |
-| 进度回显 | `progress=65` 后 `payload()["progress"]==65` |
-| 标签输入 | `StarryTagEditor` 高度规范，重复标签去重 |
-| 提醒禁用标签 | 未开启提醒时 `remind_disabled_label` 可见 |
-| 子任务预览树 | `parent_title` 注入后预览节点正确展示 |
-
-</td>
-<td width="50%" valign="top">
-
-### 主窗口回归套件
-
-[`tests/mainwindow_regression_suite.py`](tests/mainwindow_regression_suite.py)
-
-| 测试域 | 核心断言 |
-|:---|:---|
-| 树勾选完成联动 | 勾选后 `completed` 持久化 True |
-| 完成庆祝动效 | `CelebrationOverlay` 在完成时触发 |
-| 单次触发定时器 | `reminder_timer.isSingleShot()==True` |
-| 子任务创建可见性 | `forced_visible_ids` 确保创建后可见 |
-| 父节点提醒不重置 | 添加子任务不重置父 `reminder_sent` |
-| 提醒轮询路径 | 声音→弹窗完整顺序验证 |
-| Windows 无 Toast | `_should_show_system_reminder_toast()==False` |
-| 甘特图进度同步 | `gantt_entries()` 与 ORM 值一致 |
-
-</td>
-</tr>
-</table>
-    </div>
-  </foreignObject>
+  <style><![CDATA[
+    text { font-family: "Noto Sans SC", "Microsoft YaHei", "Segoe UI", sans-serif; font-size:11px; fill: #111; }
+  ]]></style>
+  <text x="16" y="16">### 编辑器回归套件</text>
+  <text x="16" y="52">[`tests/editor_regression_suite.py`](tests/editor_regression_suite.py)</text>
+  <text x="16" y="88">| 测试域 | 核心断言 |</text>
+  <text x="16" y="106">|:---|:---|</text>
+  <text x="16" y="124">| 布局可见性 | `set_context()` 后控件可见 |</text>
+  <text x="16" y="142">| 滚动行为 | 长表单滚动后目标控件仍在可视区 |</text>
+  <text x="16" y="160">| 时间约束 | `remind_at &gt; due_at` 时强制修正 |</text>
+  <text x="16" y="178">| 进度回显 | `progress=65` 后 `payload()[&quot;progress&quot;]==65` |</text>
+  <text x="16" y="196">| 标签输入 | `StarryTagEditor` 高度规范，重复标签去重 |</text>
+  <text x="16" y="214">| 提醒禁用标签 | 未开启提醒时 `remind_disabled_label` 可见 |</text>
+  <text x="16" y="232">| 子任务预览树 | `parent_title` 注入后预览节点正确展示 |</text>
+  <text x="16" y="268">### 主窗口回归套件</text>
+  <text x="16" y="304">[`tests/mainwindow_regression_suite.py`](tests/mainwindow_regression_suite.py)</text>
+  <text x="16" y="340">| 测试域 | 核心断言 |</text>
+  <text x="16" y="358">|:---|:---|</text>
+  <text x="16" y="376">| 树勾选完成联动 | 勾选后 `completed` 持久化 True |</text>
+  <text x="16" y="394">| 完成庆祝动效 | `CelebrationOverlay` 在完成时触发 |</text>
+  <text x="16" y="412">| 单次触发定时器 | `reminder_timer.isSingleShot()==True` |</text>
+  <text x="16" y="430">| 子任务创建可见性 | `forced_visible_ids` 确保创建后可见 |</text>
+  <text x="16" y="448">| 父节点提醒不重置 | 添加子任务不重置父 `reminder_sent` |</text>
+  <text x="16" y="466">| 提醒轮询路径 | 声音→弹窗完整顺序验证 |</text>
+  <text x="16" y="484">| Windows 无 Toast | `_should_show_system_reminder_toast()==False` |</text>
+  <text x="16" y="502">| 甘特图进度同步 | `gantt_entries()` 与 ORM 值一致 |</text>
 </svg>
+
+

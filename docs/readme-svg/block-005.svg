@@ -1,30 +1,19 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="632" viewBox="0 0 1600 632" preserveAspectRatio="xMinYMin meet">
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="408" viewBox="0 0 1600 408" preserveAspectRatio="xMinYMin meet">
   <rect width="100%" height="100%" fill="#ffffff"/>
-  <foreignObject x="0" y="0" width="100%" height="100%">
-    <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: serif; font-size: 14px; color: #111; margin: 0; padding: 16px; line-height: 1.4;">
-<table style="width:100%;border-collapse:collapse;font-family:serif;background:#fff;border:2px solid #1a1a1a;margin:8px 0;">
-<caption style="caption-side:top;text-align:center;padding:8px 0;font-size:13px;font-weight:bold;color:#1a1a1a;letter-spacing:1px;">Task Forge — 五区架构</caption>
-<tr>
-<td style="width:110px;padding:10px 14px;background:#1a1a1a;color:#fff;font-weight:bold;font-size:12px;text-align:center;border-bottom:1px solid #555;">表现区</td>
-<td style="padding:10px 16px;background:#f0f0f0;font-size:11px;color:#1a1a1a;border-bottom:1px solid #ccc;"><code>src/ui/</code> · 25+ UI 模块 · PyQt6 组件树 · 主题装配 · 视觉资产</td>
-</tr>
-<tr>
-<td style="padding:10px 14px;background:#333;color:#fff;font-weight:bold;font-size:12px;text-align:center;border-bottom:1px solid #555;">交互区</td>
-<td style="padding:10px 16px;background:#fafafa;font-size:11px;color:#1a1a1a;border-bottom:1px solid #ccc;"><code>MainWindow.py</code> · 事件路由 · <code>switch_view()</code> · <code>refresh_everything()</code> · 提醒调度</td>
-</tr>
-<tr>
-<td style="padding:10px 14px;background:#555;color:#fff;font-weight:bold;font-size:12px;text-align:center;border-bottom:1px solid #888;">领域区</td>
-<td style="padding:10px 16px;background:#f5f5f5;font-size:11px;color:#1a1a1a;border-bottom:1px solid #ccc;"><code>task_composer.py</code> · 规则装配 · <code>payload()</code> 验证 · 时间约束联动</td>
-</tr>
-<tr>
-<td style="padding:10px 14px;background:#777;color:#fff;font-weight:bold;font-size:12px;text-align:center;border-bottom:1px solid #aaa;">数据区</td>
-<td style="padding:10px 16px;background:#f0f0f0;font-size:11px;color:#1a1a1a;border-bottom:1px solid #ccc;"><code>DB.py</code> · <code>Task.py</code> · <code>Note.py</code> · SQLAlchemy ORM · <code>_ensure_schema</code> · SSOT 唯一写入</td>
-</tr>
-<tr>
-<td style="padding:10px 14px;background:#999;color:#fff;font-weight:bold;font-size:12px;text-align:center;">资源区</td>
-<td style="padding:10px 16px;background:#fafafa;font-size:11px;color:#1a1a1a;"><code>src/assets/</code> · 图标 / 主题 / 声效 · 三套配色 · 背景图管理</td>
-</tr>
-</table>
-    </div>
-  </foreignObject>
+  <style><![CDATA[
+    text { font-family: "Noto Sans SC", "Microsoft YaHei", "Segoe UI", sans-serif; font-size:11px; fill: #111; }
+  ]]></style>
+  <text x="16" y="16">Task Forge — 五区架构</text>
+  <text x="16" y="52">表现区</text>
+  <text x="16" y="88">src/ui/ · 25+ UI 模块 · PyQt6 组件树 · 主题装配 · 视觉资产</text>
+  <text x="16" y="124">交互区</text>
+  <text x="16" y="160">MainWindow.py · 事件路由 · switch_view() · refresh_everything() · 提醒调度</text>
+  <text x="16" y="196">领域区</text>
+  <text x="16" y="232">task_composer.py · 规则装配 · payload() 验证 · 时间约束联动</text>
+  <text x="16" y="268">数据区</text>
+  <text x="16" y="304">DB.py · Task.py · Note.py · SQLAlchemy ORM · _ensure_schema · SSOT 唯一写入</text>
+  <text x="16" y="340">资源区</text>
+  <text x="16" y="376">src/assets/ · 图标 / 主题 / 声效 · 三套配色 · 背景图管理</text>
 </svg>
+
+

@@ -1,109 +1,30 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="2528" viewBox="0 0 1600 2528" preserveAspectRatio="xMinYMin meet">
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="768" viewBox="0 0 1600 768" preserveAspectRatio="xMinYMin meet">
   <rect width="100%" height="100%" fill="#ffffff"/>
-  <foreignObject x="0" y="0" width="100%" height="100%">
-    <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: serif; font-size: 14px; color: #111; margin: 0; padding: 16px; line-height: 1.4;">
-<table>
-<tr>
-<td width="50%" align="center">
-
-### 今日视图 · 任务树
-
-<img src="../demo/01-today-view.svg" alt="今日视图演示" width="100%">
-
-<sub>默认启动视图。<code>forced_visible_ids</code> 确保子任务在受限过滤视图中创建后仍可见。逾期任务红色高亮，今日到期橙色提示。</sub>
-
-</td>
-<td width="50%" align="center">
-
-### 任务编辑器 · 上下文注入
-
-<img src="../demo/02-create-task.svg" alt="任务编辑器演示" width="100%">
-
-<sub><code>set_context()</code> 三模式注入（独立新建 / 编辑已有 / 创建子任务），<code>_sync_reminder_constraints()</code> 实时校验 $t_{remind} \leq t_{due}$，<code>payload()</code> 统一输出。</sub>
-
-</td>
-</tr>
-<tr>
-<td width="50%" align="center">
-
-### 父子 DAG · 自动归档联动
-
-<img src="../demo/03-parent-child-dag.svg" alt="父子联动演示" width="100%">
-
-<sub>全部子节点完成时 <code>_refresh_parent_chain()</code> 自动归档父节点并写入 <code>completed_at</code>；<code>reminder_sent</code> 字段隔离，父节点刷新不干扰已调度的提醒。</sub>
-
-</td>
-<td width="50%" align="center">
-
-### 甘特图 · 时间轴进度可视化
-
-<img src="../demo/04-gantt-view.svg" alt="甘特图演示" width="100%">
-
-<sub><code>GanttTimeline.paintEvent()</code> 完全自绘。父子任务缩进 18px，百分比进度条实时渲染，数据源 <code>gantt_entries()</code> 与 Task ORM 字段严格一致。</sub>
-
-</td>
-</tr>
-<tr>
-<td width="50%" align="center">
-
-### 看板 · 分析 Hub
-
-<img src="../demo/06-kanban-board.svg" alt="看板分析演示" width="100%">
-
-<sub><code>HubView</code> 双标签页：KanbanBoard 四列泳道（待办 / 进行中 / 审核中 / 已完成）+ AdvancedAnalyticsView AI 能力维度分数条与 AI 深度洞察结构化卡片。</sub>
-
-</td>
-<td width="50%" align="center">
-
-### 提醒调度 · 防重复弹窗
-
-<img src="../demo/08-reminder-dialog.svg" alt="提醒弹窗演示" width="100%">
-
-<sub>Single-shot 定时器 + <code>reminder_sent</code> 防重复互斥锁 + <code>postpone_reminder()</code> 延期补偿，每个提醒只响一次，延期后解锁重新调度。</sub>
-
-</td>
-</tr>
-<tr>
-<td width="50%" align="center">
-
-### 日历 · 月度任务分布
-
-<img src="../demo/05-calendar-view.svg" alt="日历视图演示" width="100%">
-
-<sub>月度网格视图，任务密度色块可视化。按月翻页，点击日期格聚焦当日任务列表。</sub>
-
-</td>
-<td width="50%" align="center">
-
-### 导入导出 · 数据安全
-
-<img src="../demo/10-export-import.svg" alt="导入导出演示" width="100%">
-
-<sub>三格式导出（JSON 全量 / CSV 电子表格 / Markdown 周报），<code>import_data()</code> 含结构校验与 ID 映射恢复。冷启动自动备份 <code>.db → .db.bak</code>。</sub>
-
-</td>
-</tr>
-<tr>
-<td width="50%" align="center">
-
-### 专注计时器 · tracked_minutes
-
-<img src="../demo/14-focus-timer.svg" alt="专注计时器演示" width="100%">
-
-<sub>选中任务后启动专注计时，暂停 / 恢复 / 结束后自动累加 <code>tracked_minutes</code>，与分析 Hub 的效率偏差 $T_{actual} - \hat{T}$ 数据直接打通。</sub>
-
-</td>
-<td width="50%" align="center">
-
-### 主题切换 · 三套视觉风格
-
-<img src="../demo/12-theme-settings.svg" alt="主题切换演示" width="100%">
-
-<sub>深色 / 浅色 / 日出橙三套完整主题，全局 QSS 切换 + <code>StarryDialogShell.set_backdrop_pixmap()</code> 弹窗背景继承，保证所有页面主题一致性。</sub>
-
-</td>
-</tr>
-</table>
-    </div>
-  </foreignObject>
+  <style><![CDATA[
+    text { font-family: "Noto Sans SC", "Microsoft YaHei", "Segoe UI", sans-serif; font-size:11px; fill: #111; }
+  ]]></style>
+  <text x="16" y="16">### 今日视图 · 任务树</text>
+  <text x="16" y="52">默认启动视图。forced_visible_ids 确保子任务在受限过滤视图中创建后仍可见。逾期任务红色高亮，今日到期橙色提示。</text>
+  <text x="16" y="88">### 任务编辑器 · 上下文注入</text>
+  <text x="16" y="124">set_context() 三模式注入（独立新建 / 编辑已有 / 创建子任务），_sync_reminder_constraints() 实时校验 $t_{remind} \leq</text>
+  <text x="16" y="142">t_{due}$，payload() 统一输出。</text>
+  <text x="16" y="178">### 父子 DAG · 自动归档联动</text>
+  <text x="16" y="214">全部子节点完成时 _refresh_parent_chain() 自动归档父节点并写入 completed_at；reminder_sent 字段隔离，父节点刷新不干扰已调度的提醒。</text>
+  <text x="16" y="250">### 甘特图 · 时间轴进度可视化</text>
+  <text x="16" y="286">GanttTimeline.paintEvent() 完全自绘。父子任务缩进 18px，百分比进度条实时渲染，数据源 gantt_entries() 与 Task ORM 字段严格一致。</text>
+  <text x="16" y="322">### 看板 · 分析 Hub</text>
+  <text x="16" y="358">HubView 双标签页：KanbanBoard 四列泳道（待办 / 进行中 / 审核中 / 已完成）+ AdvancedAnalyticsView AI 能力维度分数条与 AI</text>
+  <text x="16" y="376">深度洞察结构化卡片。</text>
+  <text x="16" y="412">### 提醒调度 · 防重复弹窗</text>
+  <text x="16" y="448">Single-shot 定时器 + reminder_sent 防重复互斥锁 + postpone_reminder() 延期补偿，每个提醒只响一次，延期后解锁重新调度。</text>
+  <text x="16" y="484">### 日历 · 月度任务分布</text>
+  <text x="16" y="520">月度网格视图，任务密度色块可视化。按月翻页，点击日期格聚焦当日任务列表。</text>
+  <text x="16" y="556">### 导入导出 · 数据安全</text>
+  <text x="16" y="592">三格式导出（JSON 全量 / CSV 电子表格 / Markdown 周报），import_data() 含结构校验与 ID 映射恢复。冷启动自动备份 .db → .db.bak。</text>
+  <text x="16" y="628">### 专注计时器 · tracked_minutes</text>
+  <text x="16" y="664">选中任务后启动专注计时，暂停 / 恢复 / 结束后自动累加 tracked_minutes，与分析 Hub 的效率偏差 $T_{actual} - \hat{T}$ 数据直接打通。</text>
+  <text x="16" y="700">### 主题切换 · 三套视觉风格</text>
+  <text x="16" y="736">深色 / 浅色 / 日出橙三套完整主题，全局 QSS 切换 + StarryDialogShell.set_backdrop_pixmap() 弹窗背景继承，保证所有页面主题一致性。</text>
 </svg>
+
+

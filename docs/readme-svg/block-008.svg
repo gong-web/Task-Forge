@@ -1,31 +1,88 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="656" viewBox="0 0 1600 656" preserveAspectRatio="xMinYMin meet">
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="2892" viewBox="0 0 1600 2892" preserveAspectRatio="xMinYMin meet">
   <rect width="100%" height="100%" fill="#ffffff"/>
-  <foreignObject x="0" y="0" width="100%" height="100%">
-    <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: serif; font-size: 14px; color: #111; margin: 0; padding: 16px; line-height: 1.4;">
-<table>
-<tr>
-  <th>字段</th><th>SQLAlchemy 类型</th><th>约束</th><th>语义说明</th>
-</tr>
-<tr><td><code>id</code></td><td><code>Integer</code></td><td>PK · AutoIncrement</td><td>全局唯一标识符</td></tr>
-<tr><td><code>title</code></td><td><code>String(120)</code></td><td>NOT NULL</td><td>任务标题</td></tr>
-<tr><td><code>category</code></td><td><code>String(60)</code></td><td>default="学习"</td><td>一级分类标签</td></tr>
-<tr><td><code>tags</code></td><td><code>Text</code></td><td>default=""</td><td>多标签文本（空格分隔）</td></tr>
-<tr><td><code>priority</code></td><td><code>String(10)</code></td><td>枚举：高 / 中 / 低</td><td>任务优先级</td></tr>
-<tr><td><code>due_at</code></td><td><code>DateTime</code></td><td>Nullable · Index</td><td>截止时间 $t_{\text{due}}$</td></tr>
-<tr><td><code>remind_at</code></td><td><code>DateTime</code></td><td>Nullable</td><td>提醒时间 $t_{\text{remind}}$，约束 $t_{\text{remind}} \leq t_{\text{due}}$</td></tr>
-<tr><td><code>progress</code></td><td><code>Integer</code></td><td>default=0</td><td>完成度 $P \in [0, 100]$</td></tr>
-<tr><td><code>estimated_minutes</code></td><td><code>Integer</code></td><td>default=0</td><td>预估投入时长 $\hat{T}$</td></tr>
-<tr><td><code>tracked_minutes</code></td><td><code>Integer</code></td><td>default=0</td><td>实际累计投入 $T_{\text{actual}}$</td></tr>
-<tr><td><code>recurrence_rule</code></td><td><code>String(20)</code></td><td>default="不重复"</td><td>循环规则（每天 / 每周 / 自定义）</td></tr>
-<tr><td><code>completed</code></td><td><code>Boolean</code></td><td>default=False</td><td>任务完成态标志</td></tr>
-<tr><td><code>completed_at</code></td><td><code>DateTime</code></td><td>Nullable</td><td>完成时间戳，归档时写入</td></tr>
-<tr><td><code>reminder_sent</code></td><td><code>Boolean</code></td><td>default=False</td><td>防重复互斥锁，弹窗展示后置 True</td></tr>
-<tr><td><code>sort_order</code></td><td><code>Integer</code></td><td>default=0</td><td>同级任务排序权重</td></tr>
-<tr><td><code>parent_id</code></td><td><code>Integer</code></td><td>FK(self) · Nullable · CASCADE</td><td>父任务引用，构成 DAG</td></tr>
-<tr><td><code>created_at</code></td><td><code>DateTime</code></td><td>default=now</td><td>创建时间戳</td></tr>
-<tr><td><code>updated_at</code></td><td><code>DateTime</code></td><td>onupdate=now</td><td>最后修改时间戳</td></tr>
-<tr><td><code>description</code></td><td><code>Text</code></td><td>default=""</td><td>任务详情说明</td></tr>
-</table>
-    </div>
-  </foreignObject>
+  <style><![CDATA[
+    text { font-family: "Noto Sans SC", "Microsoft YaHei", "Segoe UI", sans-serif; font-size:11px; fill: #111; }
+  ]]></style>
+  <text x="16" y="16">字段</text>
+  <text x="16" y="52">SQLAlchemy 类型</text>
+  <text x="16" y="88">约束</text>
+  <text x="16" y="124">语义说明</text>
+  <text x="16" y="160">id</text>
+  <text x="16" y="196">Integer</text>
+  <text x="16" y="232">PK · AutoIncrement</text>
+  <text x="16" y="268">全局唯一标识符</text>
+  <text x="16" y="304">title</text>
+  <text x="16" y="340">String(120)</text>
+  <text x="16" y="376">NOT NULL</text>
+  <text x="16" y="412">任务标题</text>
+  <text x="16" y="448">category</text>
+  <text x="16" y="484">String(60)</text>
+  <text x="16" y="520">default=&quot;学习&quot;</text>
+  <text x="16" y="556">一级分类标签</text>
+  <text x="16" y="592">tags</text>
+  <text x="16" y="628">Text</text>
+  <text x="16" y="664">default=&quot;&quot;</text>
+  <text x="16" y="700">多标签文本（空格分隔）</text>
+  <text x="16" y="736">priority</text>
+  <text x="16" y="772">String(10)</text>
+  <text x="16" y="808">枚举：高 / 中 / 低</text>
+  <text x="16" y="844">任务优先级</text>
+  <text x="16" y="880">due_at</text>
+  <text x="16" y="916">DateTime</text>
+  <text x="16" y="952">Nullable · Index</text>
+  <text x="16" y="988">截止时间 $t_{\text{due}}$</text>
+  <text x="16" y="1024">remind_at</text>
+  <text x="16" y="1060">DateTime</text>
+  <text x="16" y="1096">Nullable</text>
+  <text x="16" y="1132">提醒时间 $t_{\text{remind}}$，约束 $t_{\text{remind}} \leq t_{\text{due}}$</text>
+  <text x="16" y="1168">progress</text>
+  <text x="16" y="1204">Integer</text>
+  <text x="16" y="1240">default=0</text>
+  <text x="16" y="1276">完成度 $P \in [0, 100]$</text>
+  <text x="16" y="1312">estimated_minutes</text>
+  <text x="16" y="1348">Integer</text>
+  <text x="16" y="1384">default=0</text>
+  <text x="16" y="1420">预估投入时长 $\hat{T}$</text>
+  <text x="16" y="1456">tracked_minutes</text>
+  <text x="16" y="1492">Integer</text>
+  <text x="16" y="1528">default=0</text>
+  <text x="16" y="1564">实际累计投入 $T_{\text{actual}}$</text>
+  <text x="16" y="1600">recurrence_rule</text>
+  <text x="16" y="1636">String(20)</text>
+  <text x="16" y="1672">default=&quot;不重复&quot;</text>
+  <text x="16" y="1708">循环规则（每天 / 每周 / 自定义）</text>
+  <text x="16" y="1744">completed</text>
+  <text x="16" y="1780">Boolean</text>
+  <text x="16" y="1816">default=False</text>
+  <text x="16" y="1852">任务完成态标志</text>
+  <text x="16" y="1888">completed_at</text>
+  <text x="16" y="1924">DateTime</text>
+  <text x="16" y="1960">Nullable</text>
+  <text x="16" y="1996">完成时间戳，归档时写入</text>
+  <text x="16" y="2032">reminder_sent</text>
+  <text x="16" y="2068">Boolean</text>
+  <text x="16" y="2104">default=False</text>
+  <text x="16" y="2140">防重复互斥锁，弹窗展示后置 True</text>
+  <text x="16" y="2176">sort_order</text>
+  <text x="16" y="2212">Integer</text>
+  <text x="16" y="2248">default=0</text>
+  <text x="16" y="2284">同级任务排序权重</text>
+  <text x="16" y="2320">parent_id</text>
+  <text x="16" y="2356">Integer</text>
+  <text x="16" y="2392">FK(self) · Nullable · CASCADE</text>
+  <text x="16" y="2428">父任务引用，构成 DAG</text>
+  <text x="16" y="2464">created_at</text>
+  <text x="16" y="2500">DateTime</text>
+  <text x="16" y="2536">default=now</text>
+  <text x="16" y="2572">创建时间戳</text>
+  <text x="16" y="2608">updated_at</text>
+  <text x="16" y="2644">DateTime</text>
+  <text x="16" y="2680">onupdate=now</text>
+  <text x="16" y="2716">最后修改时间戳</text>
+  <text x="16" y="2752">description</text>
+  <text x="16" y="2788">Text</text>
+  <text x="16" y="2824">default=&quot;&quot;</text>
+  <text x="16" y="2860">任务详情说明</text>
 </svg>
+
+

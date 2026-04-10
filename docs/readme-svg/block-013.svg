@@ -1,40 +1,27 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="872" viewBox="0 0 1600 872" preserveAspectRatio="xMinYMin meet">
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="696" viewBox="0 0 1600 696" preserveAspectRatio="xMinYMin meet">
   <rect width="100%" height="100%" fill="#ffffff"/>
-  <foreignObject x="0" y="0" width="100%" height="100%">
-    <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: serif; font-size: 14px; color: #111; margin: 0; padding: 16px; line-height: 1.4;">
-<table style="width:100%;border-collapse:collapse;font-family:serif;background:#fff;border:1px solid #333;margin:8px 0;">
-<caption style="caption-side:top;text-align:center;padding:8px 0;font-size:13px;font-weight:bold;color:#1a1a1a;">reminder_sent 字段状态转换</caption>
-<tr style="background:#1a1a1a;color:#fff;">
-<th style="padding:8px 14px;font-size:11px;border-right:1px solid #555;">触发条件</th>
-<th style="padding:8px 14px;font-size:11px;border-right:1px solid #555;">变化方向</th>
-<th style="padding:8px 14px;font-size:11px;">执行函数</th>
-</tr>
-<tr style="background:#f5f5f5;">
-<td style="padding:8px 14px;font-size:11px;border-right:1px solid #ccc;">提醒时间到达，弹窗已展示</td>
-<td style="padding:8px 14px;font-size:11px;border-right:1px solid #ccc;font-weight:bold;">False → True</td>
-<td style="padding:8px 14px;font-size:11px;"><code>mark_reminders_sent()</code></td>
-</tr>
-<tr>
-<td style="padding:8px 14px;font-size:11px;border-right:1px solid #ccc;">用户修改 <code>remind_at</code> 字段</td>
-<td style="padding:8px 14px;font-size:11px;border-right:1px solid #ccc;font-weight:bold;">True → False</td>
-<td style="padding:8px 14px;font-size:11px;"><code>update_task()</code> 内部重置</td>
-</tr>
-<tr style="background:#f5f5f5;">
-<td style="padding:8px 14px;font-size:11px;border-right:1px solid #ccc;">任务被标记为完成</td>
-<td style="padding:8px 14px;font-size:11px;border-right:1px solid #ccc;font-weight:bold;">False → True</td>
-<td style="padding:8px 14px;font-size:11px;"><code>_set_completion_state()</code></td>
-</tr>
-<tr>
-<td style="padding:8px 14px;font-size:11px;border-right:1px solid #ccc;">用户点击「延期」</td>
-<td style="padding:8px 14px;font-size:11px;border-right:1px solid #ccc;font-weight:bold;">True → False</td>
-<td style="padding:8px 14px;font-size:11px;"><code>postpone_reminder()</code></td>
-</tr>
-<tr style="background:#f5f5f5;">
-<td style="padding:8px 14px;font-size:11px;border-right:1px solid #ccc;">父节点刷新（<code>_refresh_parent_chain</code>）</td>
-<td style="padding:8px 14px;font-size:11px;border-right:1px solid #ccc;color:#666;">无变化（隔离）</td>
-<td style="padding:8px 14px;font-size:11px;color:#666;">—</td>
-</tr>
-</table>
-    </div>
-  </foreignObject>
+  <style><![CDATA[
+    text { font-family: "Noto Sans SC", "Microsoft YaHei", "Segoe UI", sans-serif; font-size:11px; fill: #111; }
+  ]]></style>
+  <text x="16" y="16">reminder_sent 字段状态转换</text>
+  <text x="16" y="52">触发条件</text>
+  <text x="16" y="88">变化方向</text>
+  <text x="16" y="124">执行函数</text>
+  <text x="16" y="160">提醒时间到达，弹窗已展示</text>
+  <text x="16" y="196">False → True</text>
+  <text x="16" y="232">mark_reminders_sent()</text>
+  <text x="16" y="268">用户修改 remind_at 字段</text>
+  <text x="16" y="304">True → False</text>
+  <text x="16" y="340">update_task() 内部重置</text>
+  <text x="16" y="376">任务被标记为完成</text>
+  <text x="16" y="412">False → True</text>
+  <text x="16" y="448">_set_completion_state()</text>
+  <text x="16" y="484">用户点击「延期」</text>
+  <text x="16" y="520">True → False</text>
+  <text x="16" y="556">postpone_reminder()</text>
+  <text x="16" y="592">父节点刷新（_refresh_parent_chain）</text>
+  <text x="16" y="628">无变化（隔离）</text>
+  <text x="16" y="664">—</text>
 </svg>
+
+

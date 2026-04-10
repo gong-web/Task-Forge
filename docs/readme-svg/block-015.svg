@@ -1,28 +1,33 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="584" viewBox="0 0 1600 584" preserveAspectRatio="xMinYMin meet">
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="696" viewBox="0 0 1600 696" preserveAspectRatio="xMinYMin meet">
   <rect width="100%" height="100%" fill="#ffffff"/>
-  <foreignObject x="0" y="0" width="100%" height="100%">
-    <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: serif; font-size: 14px; color: #111; margin: 0; padding: 16px; line-height: 1.4;">
-<table style="width:100%;border-collapse:collapse;font-family:serif;background:#fff;border:1px solid #333;margin:8px 0;">
-<caption style="caption-side:top;text-align:center;padding:8px 0;font-size:13px;font-weight:bold;color:#1a1a1a;">switch_view(mode) 统一路由 — 11 种视图模式</caption>
-<tr>
-<td style="width:25%;padding:10px 14px;border:1px solid #ccc;text-align:center;background:#f5f5f5;"><code>today</code><br><span style="font-size:10px;color:#666;">今日聚焦 · 默认启动</span></td>
-<td style="width:25%;padding:10px 14px;border:1px solid #ccc;text-align:center;"><code>plan</code><br><span style="font-size:10px;color:#666;">未完成计划树</span></td>
-<td style="width:25%;padding:10px 14px;border:1px solid #ccc;text-align:center;background:#f5f5f5;"><code>tasktree</code><br><span style="font-size:10px;color:#666;">全量任务树</span></td>
-<td style="width:25%;padding:10px 14px;border:1px solid #ccc;text-align:center;"><code>completed</code><br><span style="font-size:10px;color:#666;">已完成任务归档</span></td>
-</tr>
-<tr>
-<td style="padding:10px 14px;border:1px solid #ccc;text-align:center;background:#f5f5f5;"><code>hub</code><br><span style="font-size:10px;color:#666;">看板 + 分析 Hub</span></td>
-<td style="padding:10px 14px;border:1px solid #ccc;text-align:center;"><code>calendar</code><br><span style="font-size:10px;color:#666;">月度任务分布</span></td>
-<td style="padding:10px 14px;border:1px solid #ccc;text-align:center;background:#f5f5f5;"><code>gantt</code><br><span style="font-size:10px;color:#666;">时间轴进度图（自绘）</span></td>
-<td style="padding:10px 14px;border:1px solid #ccc;text-align:center;"><code>settings</code><br><span style="font-size:10px;color:#666;">设置中心</span></td>
-</tr>
-<tr>
-<td style="padding:10px 14px;border:1px solid #ccc;text-align:center;background:#f0f0f0;"><code>create</code><br><span style="font-size:10px;color:#666;">新建任务编辑器</span></td>
-<td style="padding:10px 14px;border:1px solid #ccc;text-align:center;background:#f0f0f0;"><code>edit</code><br><span style="font-size:10px;color:#666;">编辑已有任务</span></td>
-<td style="padding:10px 14px;border:1px solid #ccc;text-align:center;background:#f0f0f0;"><code>detail</code><br><span style="font-size:10px;color:#666;">任务详情全屏</span></td>
-<td style="padding:10px 14px;border:1px solid #ccc;text-align:center;background:#fafafa;font-size:10px;color:#999;">所有视图均通过 <code>switch_view(mode)</code> 统一路由<br>MainWindow.py</td>
-</tr>
-</table>
-    </div>
-  </foreignObject>
+  <style><![CDATA[
+    text { font-family: "Noto Sans SC", "Microsoft YaHei", "Segoe UI", sans-serif; font-size:11px; fill: #111; }
+  ]]></style>
+  <text x="16" y="16">switch_view(mode) 统一路由 — 11 种视图模式</text>
+  <text x="16" y="52">today</text>
+  <text x="16" y="70">今日聚焦 · 默认启动</text>
+  <text x="16" y="106">plan</text>
+  <text x="16" y="124">未完成计划树</text>
+  <text x="16" y="160">tasktree</text>
+  <text x="16" y="178">全量任务树</text>
+  <text x="16" y="214">completed</text>
+  <text x="16" y="232">已完成任务归档</text>
+  <text x="16" y="268">hub</text>
+  <text x="16" y="286">看板 + 分析 Hub</text>
+  <text x="16" y="322">calendar</text>
+  <text x="16" y="340">月度任务分布</text>
+  <text x="16" y="376">gantt</text>
+  <text x="16" y="394">时间轴进度图（自绘）</text>
+  <text x="16" y="430">settings</text>
+  <text x="16" y="448">设置中心</text>
+  <text x="16" y="484">create</text>
+  <text x="16" y="502">新建任务编辑器</text>
+  <text x="16" y="538">edit</text>
+  <text x="16" y="556">编辑已有任务</text>
+  <text x="16" y="592">detail</text>
+  <text x="16" y="610">任务详情全屏</text>
+  <text x="16" y="646">所有视图均通过 switch_view(mode) 统一路由</text>
+  <text x="16" y="664">MainWindow.py</text>
 </svg>
+
+

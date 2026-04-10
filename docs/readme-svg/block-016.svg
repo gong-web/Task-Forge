@@ -1,42 +1,27 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="920" viewBox="0 0 1600 920" preserveAspectRatio="xMinYMin meet">
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="426" viewBox="0 0 1600 426" preserveAspectRatio="xMinYMin meet">
   <rect width="100%" height="100%" fill="#ffffff"/>
-  <foreignObject x="0" y="0" width="100%" height="100%">
-    <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: serif; font-size: 14px; color: #111; margin: 0; padding: 16px; line-height: 1.4;">
-<table>
-<tr>
-<td width="50%" valign="top">
-
-### DB 聚合接口
-
-| 接口 | 返回描述 |
-|:---|:---|
-| `dashboard_snapshot()` | 完成率 / 逾期数 / 本周完成 |
-| `dashboard_counts()` | 快速计数（完成/未完成/逾期/今日） |
-| `weekly_series()` | 近 7 天逐日完成趋势 |
-| `gantt_entries()` | 起止区间 / 进度 / 优先级 / 完成态 |
-| `personal_analytics_snapshot()` | 效率偏差 · 分类分布 · 热力图数组 |
-
-</td>
-<td width="50%" valign="top">
-
-### Hub 视图区次
-
-```text
-HubView(QWidget)
-└── QTabWidget
-    ├── "看板" → KanbanBoard
-    │   ├── 待办 | 进行中 | 审核中 | 已完成
-    │   └── task_detail_requested = pyqtSignal(int)
-    └── "分析" → AdvancedAnalyticsView
-        ├── AI 能力维度卡片（7 维度进度条，由 AI ability_profile 驱动）
-        └── AI 深度洞察卡片（AICardRenderer 结构化分析文本）
-```
-
-<img src="../demo/07-analytics-hub.svg" alt="数据分析 Hub 演示" width="100%">
-
-</td>
-</tr>
-</table>
-    </div>
-  </foreignObject>
+  <style><![CDATA[
+    text { font-family: "Noto Sans SC", "Microsoft YaHei", "Segoe UI", sans-serif; font-size:11px; fill: #111; }
+  ]]></style>
+  <text x="16" y="16">### DB 聚合接口</text>
+  <text x="16" y="52">| 接口 | 返回描述 |</text>
+  <text x="16" y="70">|:---|:---|</text>
+  <text x="16" y="88">| `dashboard_snapshot()` | 完成率 / 逾期数 / 本周完成 |</text>
+  <text x="16" y="106">| `dashboard_counts()` | 快速计数（完成/未完成/逾期/今日） |</text>
+  <text x="16" y="124">| `weekly_series()` | 近 7 天逐日完成趋势 |</text>
+  <text x="16" y="142">| `gantt_entries()` | 起止区间 / 进度 / 优先级 / 完成态 |</text>
+  <text x="16" y="160">| `personal_analytics_snapshot()` | 效率偏差 · 分类分布 · 热力图数组 |</text>
+  <text x="16" y="196">### Hub 视图区次</text>
+  <text x="16" y="232">```text</text>
+  <text x="16" y="250">HubView(QWidget)</text>
+  <text x="16" y="268">└── QTabWidget</text>
+  <text x="16" y="286">├── &quot;看板&quot; → KanbanBoard</text>
+  <text x="16" y="304">│   ├── 待办 | 进行中 | 审核中 | 已完成</text>
+  <text x="16" y="322">│   └── task_detail_requested = pyqtSignal(int)</text>
+  <text x="16" y="340">└── &quot;分析&quot; → AdvancedAnalyticsView</text>
+  <text x="16" y="358">├── AI 能力维度卡片（7 维度进度条，由 AI ability_profile 驱动）</text>
+  <text x="16" y="376">└── AI 深度洞察卡片（AICardRenderer 结构化分析文本）</text>
+  <text x="16" y="394">```</text>
 </svg>
+
+
