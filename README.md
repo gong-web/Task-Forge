@@ -34,7 +34,7 @@
 
 ### 今日视图 · 任务树
 
-<img src="docs/demo/01-today-view.png" alt="今日视图演示" width="100%">
+<img src="docs/demo/01-today-view.svg" alt="今日视图演示" width="100%">
 
 <sub>默认启动视图。<code>forced_visible_ids</code> 确保子任务在受限过滤视图中创建后仍可见。逾期任务红色高亮，今日到期橙色提示。</sub>
 
@@ -43,7 +43,7 @@
 
 ### 任务编辑器 · 上下文注入
 
-<img src="docs/demo/02-create-task.gif" alt="任务编辑器演示" width="100%">
+<img src="docs/demo/02-create-task.svg" alt="任务编辑器演示" width="100%">
 
 <sub><code>set_context()</code> 三模式注入（独立新建 / 编辑已有 / 创建子任务），<code>_sync_reminder_constraints()</code> 实时校验 $t_{remind} \leq t_{due}$，<code>payload()</code> 统一输出。</sub>
 
@@ -54,7 +54,7 @@
 
 ### 父子 DAG · 自动归档联动
 
-<img src="docs/demo/03-parent-child-dag.gif" alt="父子联动演示" width="100%">
+<img src="docs/demo/03-parent-child-dag.svg" alt="父子联动演示" width="100%">
 
 <sub>全部子节点完成时 <code>_refresh_parent_chain()</code> 自动归档父节点并写入 <code>completed_at</code>；<code>reminder_sent</code> 字段隔离，父节点刷新不干扰已调度的提醒。</sub>
 
@@ -63,7 +63,7 @@
 
 ### 甘特图 · 时间轴进度可视化
 
-<img src="docs/demo/04-gantt-view.png" alt="甘特图演示" width="100%">
+<img src="docs/demo/04-gantt-view.svg" alt="甘特图演示" width="100%">
 
 <sub><code>GanttTimeline.paintEvent()</code> 完全自绘。父子任务缩进 18px，百分比进度条实时渲染，数据源 <code>gantt_entries()</code> 与 Task ORM 字段严格一致。</sub>
 
@@ -74,7 +74,7 @@
 
 ### 看板 · 分析 Hub
 
-<img src="docs/demo/06-kanban-board.gif" alt="看板分析演示" width="100%">
+<img src="docs/demo/06-kanban-board.svg" alt="看板分析演示" width="100%">
 
 <sub><code>HubView</code> 双标签页：KanbanBoard 四列泳道（待办 / 进行中 / 审核中 / 已完成）+ AdvancedAnalyticsView AI 能力维度分数条与 AI 深度洞察结构化卡片。</sub>
 
@@ -83,7 +83,7 @@
 
 ### 提醒调度 · 防重复弹窗
 
-<img src="docs/demo/08-reminder-dialog.gif" alt="提醒弹窗演示" width="100%">
+<img src="docs/demo/08-reminder-dialog.svg" alt="提醒弹窗演示" width="100%">
 
 <sub>Single-shot 定时器 + <code>reminder_sent</code> 防重复互斥锁 + <code>postpone_reminder()</code> 延期补偿，每个提醒只响一次，延期后解锁重新调度。</sub>
 
@@ -94,7 +94,7 @@
 
 ### 日历 · 月度任务分布
 
-<img src="docs/demo/05-calendar-view.gif" alt="日历视图演示" width="100%">
+<img src="docs/demo/05-calendar-view.svg" alt="日历视图演示" width="100%">
 
 <sub>月度网格视图，任务密度色块可视化。按月翻页，点击日期格聚焦当日任务列表。</sub>
 
@@ -103,7 +103,7 @@
 
 ### 导入导出 · 数据安全
 
-<img src="docs/demo/10-export-import.gif" alt="导入导出演示" width="100%">
+<img src="docs/demo/10-export-import.svg" alt="导入导出演示" width="100%">
 
 <sub>三格式导出（JSON 全量 / CSV 电子表格 / Markdown 周报），<code>import_data()</code> 含结构校验与 ID 映射恢复。冷启动自动备份 <code>.db → .db.bak</code>。</sub>
 
@@ -114,7 +114,7 @@
 
 ### 专注计时器 · tracked_minutes
 
-<img src="docs/demo/14-focus-timer.gif" alt="专注计时器演示" width="100%">
+<img src="docs/demo/14-focus-timer.svg" alt="专注计时器演示" width="100%">
 
 <sub>选中任务后启动专注计时，暂停 / 恢复 / 结束后自动累加 <code>tracked_minutes</code>，与分析 Hub 的效率偏差 $T_{actual} - \hat{T}$ 数据直接打通。</sub>
 
@@ -123,7 +123,7 @@
 
 ### 主题切换 · 三套视觉风格
 
-<img src="docs/demo/12-theme-settings.gif" alt="主题切换演示" width="100%">
+<img src="docs/demo/12-theme-settings.svg" alt="主题切换演示" width="100%">
 
 <sub>深色 / 浅色 / 日出橙三套完整主题，全局 QSS 切换 + <code>StarryDialogShell.set_backdrop_pixmap()</code> 弹窗背景继承，保证所有页面主题一致性。</sub>
 
@@ -134,7 +134,7 @@
 <div align="center">
 
 > [!NOTE]
-> README 依赖的演示素材（GIF / PNG）统一放置于 `docs/demo/`。本地录制操作步骤见 [`docs/GIF录制操作步骤.md`](docs/GIF录制操作步骤.md)。
+> README 依赖的演示素材（SVG）统一放置于 `docs/demo/`。本地录制操作步骤见 [`docs/GIF录制操作步骤.md`](docs/GIF录制操作步骤.md)。
 
 </div>
 
@@ -144,16 +144,16 @@
 
 | README 引用文件 | 来源素材 |
 |:---|:---|
-| `01-today-view.png` | `今日任务.png` |
-| `02-create-task.gif` | `创建任务.gif` |
-| `03-parent-child-dag.gif` | `子任务全部完成父任务自动完成.gif` |
-| `04-gantt-view.png` | `甘特图时间轴.png` |
-| `05-calendar-view.gif` | `日历使用.gif` |
-| `06-kanban-board.gif` | `工作台任务查阅.gif` |
-| `08-reminder-dialog.gif` | `任务提醒.gif` |
-| `10-export-import.gif` | `数据持久化展示.gif` |
-| `12-theme-settings.gif` | `主题切换.gif` |
-| `14-focus-timer.gif` | `专注计时.gif` |
+| `01-today-view.svg` | `今日任务.png` |
+| `02-create-task.svg` | `创建任务.gif` |
+| `03-parent-child-dag.svg` | `子任务全部完成父任务自动完成.gif` |
+| `04-gantt-view.svg` | `甘特图时间轴.png` |
+| `05-calendar-view.svg` | `日历使用.gif` |
+| `06-kanban-board.svg` | `工作台任务查阅.gif` |
+| `08-reminder-dialog.svg` | `任务提醒.gif` |
+| `10-export-import.svg` | `数据持久化展示.gif` |
+| `12-theme-settings.svg` | `主题切换.gif` |
+| `14-focus-timer.svg` | `专注计时.gif` |
 
 其余补充素材（如 `AI深度分析.gif`、`按日期筛选任务.gif`、`背景图片切换.gif` 等）也已同步到 `docs/demo/`，便于后续继续扩展 README 演示内容。
 
@@ -163,7 +163,7 @@
 
 ### 安装与启动
 
-<table style="width:100%;border-collapse:collapse;font-family:'Noto Serif SC','Noto Sans SC','Times New Roman','SimSun',serif;background:#fff;border:1px solid #333;">
+<table style="width:100%;border-collapse:collapse;font-family:serif;background:#fff;border:1px solid #333;">
 <tr>
 <td style="width:33%;padding:14px 18px;border:1px solid #999;text-align:center;background:#f5f5f5;">
 <div style="font-size:11px;color:#999;margin-bottom:6px;">① 安装依赖</div>
@@ -201,46 +201,46 @@
 
 ## 系统架构总览
 
-### 五层架构
+### 五区架构
 
-<table style="width:100%;border-collapse:collapse;font-family:'Noto Serif SC','Noto Sans SC','Times New Roman','SimSun',serif;background:#fff;border:2px solid #1a1a1a;margin:8px 0;">
-<caption style="caption-side:top;text-align:center;padding:8px 0;font-size:13px;font-weight:bold;color:#1a1a1a;letter-spacing:1px;">Task Forge — 五层架构</caption>
+<table style="width:100%;border-collapse:collapse;font-family:serif;background:#fff;border:2px solid #1a1a1a;margin:8px 0;">
+<caption style="caption-side:top;text-align:center;padding:8px 0;font-size:13px;font-weight:bold;color:#1a1a1a;letter-spacing:1px;">Task Forge — 五区架构</caption>
 <tr>
-<td style="width:110px;padding:10px 14px;background:#1a1a1a;color:#fff;font-weight:bold;font-size:12px;text-align:center;border-bottom:1px solid #555;">表现层</td>
+<td style="width:110px;padding:10px 14px;background:#1a1a1a;color:#fff;font-weight:bold;font-size:12px;text-align:center;border-bottom:1px solid #555;">表现区</td>
 <td style="padding:10px 16px;background:#f0f0f0;font-size:11px;color:#1a1a1a;border-bottom:1px solid #ccc;"><code>src/ui/</code> · 25+ UI 模块 · PyQt6 组件树 · 主题装配 · 视觉资产</td>
 </tr>
 <tr>
-<td style="padding:10px 14px;background:#333;color:#fff;font-weight:bold;font-size:12px;text-align:center;border-bottom:1px solid #555;">交互层</td>
+<td style="padding:10px 14px;background:#333;color:#fff;font-weight:bold;font-size:12px;text-align:center;border-bottom:1px solid #555;">交互区</td>
 <td style="padding:10px 16px;background:#fafafa;font-size:11px;color:#1a1a1a;border-bottom:1px solid #ccc;"><code>MainWindow.py</code> · 事件路由 · <code>switch_view()</code> · <code>refresh_everything()</code> · 提醒调度</td>
 </tr>
 <tr>
-<td style="padding:10px 14px;background:#555;color:#fff;font-weight:bold;font-size:12px;text-align:center;border-bottom:1px solid #888;">领域层</td>
+<td style="padding:10px 14px;background:#555;color:#fff;font-weight:bold;font-size:12px;text-align:center;border-bottom:1px solid #888;">领域区</td>
 <td style="padding:10px 16px;background:#f5f5f5;font-size:11px;color:#1a1a1a;border-bottom:1px solid #ccc;"><code>task_composer.py</code> · 规则装配 · <code>payload()</code> 验证 · 时间约束联动</td>
 </tr>
 <tr>
-<td style="padding:10px 14px;background:#777;color:#fff;font-weight:bold;font-size:12px;text-align:center;border-bottom:1px solid #aaa;">数据层</td>
+<td style="padding:10px 14px;background:#777;color:#fff;font-weight:bold;font-size:12px;text-align:center;border-bottom:1px solid #aaa;">数据区</td>
 <td style="padding:10px 16px;background:#f0f0f0;font-size:11px;color:#1a1a1a;border-bottom:1px solid #ccc;"><code>DB.py</code> · <code>Task.py</code> · <code>Note.py</code> · SQLAlchemy ORM · <code>_ensure_schema</code> · SSOT 唯一写入</td>
 </tr>
 <tr>
-<td style="padding:10px 14px;background:#999;color:#fff;font-weight:bold;font-size:12px;text-align:center;">资源层</td>
+<td style="padding:10px 14px;background:#999;color:#fff;font-weight:bold;font-size:12px;text-align:center;">资源区</td>
 <td style="padding:10px 16px;background:#fafafa;font-size:11px;color:#1a1a1a;"><code>src/assets/</code> · 图标 / 主题 / 声效 · 三套配色 · 背景图管理</td>
 </tr>
 </table>
 
 ### 单向数据流
 
-<table style="width:100%;border-collapse:collapse;font-family:'Noto Serif SC','Noto Sans SC','Times New Roman','SimSun',serif;background:#fff;border:2px solid #1a1a1a;margin:8px 0;">
+<table style="width:100%;border-collapse:collapse;font-family:serif;background:#fff;border:2px solid #1a1a1a;margin:8px 0;">
 <caption style="caption-side:top;text-align:center;padding:8px 0;font-size:13px;font-weight:bold;color:#1a1a1a;">单向数据流 — Task Forge System</caption>
 <tr>
 <td style="padding:10px 20px;border-bottom:1px solid #ccc;background:#f0f0f0;text-align:center;font-size:11px;color:#1a1a1a;">
-<strong>表现层</strong> · PyQt6 · 25+ UI 模块<br>
+<strong>表现区</strong> · PyQt6 · 25+ UI 模块<br>
 <code>TodayView | PlanView | TaskTree | HubView | GanttView | Calendar</code>
 </td>
 </tr>
 <tr><td style="text-align:center;padding:4px 0;color:#666;font-size:16px;">↓ UI 事件（点击 / 勾选 / 输入）</td></tr>
 <tr>
 <td style="padding:10px 20px;border-bottom:1px solid #ccc;background:#fafafa;text-align:center;font-size:11px;color:#1a1a1a;">
-<strong>交互层</strong> · MainWindow<br>
+<strong>交互区</strong> · MainWindow<br>
 <code>switch_view() &nbsp;&nbsp; refresh_everything() &nbsp;&nbsp; check_reminders()</code>
 </td>
 </tr>
@@ -250,7 +250,7 @@
 <table style="width:100%;border-collapse:collapse;">
 <tr>
 <td style="width:33%;padding:10px 16px;border-right:1px solid #ccc;text-align:center;font-size:11px;color:#1a1a1a;">
-<strong>领域层</strong><br><code>规则 · 约束<br>状态验证</code>
+<strong>领域区</strong><br><code>规则 · 约束<br>状态验证</code>
 </td>
 <td style="width:33%;padding:10px 16px;border-right:1px solid #ccc;text-align:center;font-size:11px;color:#1a1a1a;">
 <strong>TaskEditorView</strong><br><code>set_context()<br>payload() 装配</code>
@@ -265,7 +265,7 @@
 <tr><td style="text-align:center;padding:4px 0;color:#666;font-size:16px;">↓ DB API Call</td></tr>
 <tr>
 <td style="padding:10px 20px;border-bottom:1px solid #ccc;background:#f0f0f0;text-align:center;font-size:11px;color:#1a1a1a;">
-<strong>数据层</strong> · <code>DB.py</code> (SSOT · SQLAlchemy Session)<br>
+<strong>数据区</strong> · <code>DB.py</code> (SSOT · SQLAlchemy Session)<br>
 <code>create_task | update_task | toggle_task | _refresh_parent_chain | gantt_entries | personal_analytics_snapshot</code>
 </td>
 </tr>
@@ -278,11 +278,11 @@
 </table>
 
 > [!TIP]
-> `refresh_everything()` 是**唯一重绘入口**。所有视图均通过此函数获取最新状态，彻底消除「界面先变、落盘失败」的 State Drift 竞态问题。
+> `refresh_everything()` 是**唯一重绘入口**。所有视图均通过此函数获取最新状态，彻底消除「界面先变、写入数据库失败」的 State Drift 竞态问题。
 
-### 核心函数锚点
+### 核心函数定位点
 
-<table style="width:100%;border-collapse:collapse;font-family:'Noto Serif SC','Noto Sans SC','Times New Roman','SimSun',serif;background:#fff;border:2px solid #1a1a1a;margin:8px 0;">
+<table style="width:100%;border-collapse:collapse;font-family:serif;background:#fff;border:2px solid #1a1a1a;margin:8px 0;">
 <caption style="caption-side:top;text-align:center;padding:8px 0;font-size:13px;font-weight:bold;color:#1a1a1a;">核心函数调用关系</caption>
 <tr>
 <td style="width:30%;padding:10px 16px;border:1px solid #ccc;text-align:center;font-size:11px;color:#1a1a1a;background:#f0f0f0;vertical-align:top;">
@@ -391,7 +391,7 @@ $$t_{\text{remind}} \leq t_{\text{due}}, \quad \text{由 } \texttt{\_sync\_remin
 
 ### Note 实体（6 字段）
 
-<table style="width:100%;border-collapse:collapse;font-family:'Noto Serif SC','Noto Sans SC','Times New Roman','SimSun',serif;background:#fff;border:1px solid #333;">
+<table style="width:100%;border-collapse:collapse;font-family:serif;background:#fff;border:1px solid #333;">
 <tr style="background:#1a1a1a;color:#fff;">
 <th style="padding:8px 14px;text-align:left;font-size:11px;border-right:1px solid #555;">字段</th>
 <th style="padding:8px 14px;text-align:left;font-size:11px;border-right:1px solid #555;">类型</th>
@@ -457,7 +457,7 @@ self.children_map:  dict[int, list[Task]]     # 子树枚举与递归计算
 
 ### DAG 状态转换图
 
-<table style="width:100%;border-collapse:collapse;font-family:'Noto Serif SC','Noto Sans SC','Times New Roman','SimSun',serif;background:#fff;border:1px solid #333;margin:8px 0;">
+<table style="width:100%;border-collapse:collapse;font-family:serif;background:#fff;border:1px solid #333;margin:8px 0;">
 <caption style="caption-side:top;text-align:center;padding:8px 0;font-size:13px;font-weight:bold;color:#1a1a1a;">_refresh_parent_chain — 状态转换</caption>
 <tr style="background:#1a1a1a;color:#fff;">
 <th style="padding:8px 14px;font-size:11px;border-right:1px solid #555;">状态</th>
@@ -501,9 +501,9 @@ self.children_map:  dict[int, list[Task]]     # 子树枚举与递归计算
 
 ### 子任务可见性策略
 
-`forced_visible_ids` 机制解决过滤视图下的可见性断层：
+`forced_visible_ids` 机制解决过滤视图下的可见性断区：
 
-<table style="width:100%;border-collapse:collapse;font-family:'Noto Serif SC','Noto Sans SC','Times New Roman','SimSun',serif;background:#fff;border:1px solid #333;margin:8px 0;">
+<table style="width:100%;border-collapse:collapse;font-family:serif;background:#fff;border:1px solid #333;margin:8px 0;">
 <tr style="background:#1a1a1a;color:#fff;">
 <th style="padding:8px 14px;font-size:11px;border-right:1px solid #555;">场景</th>
 <th style="padding:8px 14px;font-size:11px;border-right:1px solid #555;">问题</th>
@@ -532,7 +532,7 @@ self.children_map:  dict[int, list[Task]]     # 子树枚举与递归计算
 
 ### 调度时序图
 
-<table style="width:100%;border-collapse:collapse;font-family:'Noto Serif SC','Noto Sans SC','Times New Roman','SimSun',serif;background:#fff;border:1px solid #333;margin:8px 0;">
+<table style="width:100%;border-collapse:collapse;font-family:serif;background:#fff;border:1px solid #333;margin:8px 0;">
 <caption style="caption-side:top;text-align:center;padding:8px 0;font-size:13px;font-weight:bold;color:#1a1a1a;">提醒调度时序</caption>
 <tr style="background:#1a1a1a;color:#fff;">
 <th style="padding:8px 12px;font-size:11px;text-align:center;border-right:1px solid #555;">提醒定时器<br><code>Single-shot</code></th>
@@ -570,7 +570,7 @@ self.children_map:  dict[int, list[Task]]     # 子树枚举与递归计算
 
 ### `reminder_sent` 状态转换矩阵
 
-<table style="width:100%;border-collapse:collapse;font-family:'Noto Serif SC','Noto Sans SC','Times New Roman','SimSun',serif;background:#fff;border:1px solid #333;margin:8px 0;">
+<table style="width:100%;border-collapse:collapse;font-family:serif;background:#fff;border:1px solid #333;margin:8px 0;">
 <caption style="caption-side:top;text-align:center;padding:8px 0;font-size:13px;font-weight:bold;color:#1a1a1a;">reminder_sent 字段状态转换</caption>
 <tr style="background:#1a1a1a;color:#fff;">
 <th style="padding:8px 14px;font-size:11px;border-right:1px solid #555;">触发条件</th>
@@ -628,7 +628,7 @@ set_context(task=None,  preferred_parent_id=pid,   parent_title=title)
 
 ### 提交载荷结构与交互约束
 
-<table style="width:100%;border-collapse:collapse;font-family:'Noto Serif SC','Noto Sans SC','Times New Roman','SimSun',serif;background:#fff;border:1px solid #333;margin:8px 0;">
+<table style="width:100%;border-collapse:collapse;font-family:serif;background:#fff;border:1px solid #333;margin:8px 0;">
 <caption style="caption-side:top;text-align:center;padding:8px 0;font-size:13px;font-weight:bold;color:#1a1a1a;">payload() 输出字段与约束</caption>
 <tr>
 <td style="width:50%;padding:0;vertical-align:top;border-right:2px solid #1a1a1a;">
@@ -667,7 +667,7 @@ set_context(task=None,  preferred_parent_id=pid,   parent_title=title)
 
 ### 11 种视图模式
 
-<table style="width:100%;border-collapse:collapse;font-family:'Noto Serif SC','Noto Sans SC','Times New Roman','SimSun',serif;background:#fff;border:1px solid #333;margin:8px 0;">
+<table style="width:100%;border-collapse:collapse;font-family:serif;background:#fff;border:1px solid #333;margin:8px 0;">
 <caption style="caption-side:top;text-align:center;padding:8px 0;font-size:13px;font-weight:bold;color:#1a1a1a;">switch_view(mode) 统一路由 — 11 种视图模式</caption>
 <tr>
 <td style="width:25%;padding:10px 14px;border:1px solid #ccc;text-align:center;background:#f5f5f5;"><code>today</code><br><span style="font-size:10px;color:#666;">今日聚焦 · 默认启动</span></td>
@@ -710,7 +710,7 @@ set_context(task=None,  preferred_parent_id=pid,   parent_title=title)
 </td>
 <td width="50%" valign="top">
 
-### Hub 视图层次
+### Hub 视图区次
 
 ```text
 HubView(QWidget)
@@ -723,7 +723,7 @@ HubView(QWidget)
         └── AI 深度洞察卡片（AICardRenderer 结构化分析文本）
 ```
 
-<img src="docs/demo/07-analytics-hub.gif" alt="数据分析 Hub 演示" width="100%">
+<img src="docs/demo/07-analytics-hub.svg" alt="数据分析 Hub 演示" width="100%">
 
 </td>
 </tr>
@@ -735,7 +735,7 @@ HubView(QWidget)
 
 ### 导出接口总览
 
-<table style="width:100%;border-collapse:collapse;font-family:'Noto Serif SC','Noto Sans SC','Times New Roman','SimSun',serif;background:#fff;border:1px solid #333;margin:8px 0;">
+<table style="width:100%;border-collapse:collapse;font-family:serif;background:#fff;border:1px solid #333;margin:8px 0;">
 <tr>
 <td style="width:33%;padding:12px 18px;border:1px solid #ccc;text-align:center;background:#f5f5f5;vertical-align:top;">
 <div style="font-weight:bold;font-size:12px;color:#1a1a1a;margin-bottom:6px;"><code>export_data()</code></div>
@@ -808,8 +808,8 @@ HubView(QWidget)
 
 ### 架构约定（CLAUDE.md 兼容格式）
 
-<table style="width:100%;border-collapse:collapse;font-family:'Noto Serif SC','Noto Sans SC','Times New Roman','SimSun',serif;background:#fff;border:1px solid #333;margin:8px 0;">
-<caption style="caption-side:top;text-align:center;padding:6px 0;font-weight:bold;font-size:13px;color:#1a1a1a;font-family:'Noto Serif SC','Noto Sans SC','Times New Roman','SimSun',serif;">项目协作约定速查</caption>
+<table style="width:100%;border-collapse:collapse;font-family:serif;background:#fff;border:1px solid #333;margin:8px 0;">
+<caption style="caption-side:top;text-align:center;padding:6px 0;font-weight:bold;font-size:13px;color:#1a1a1a;font-family:serif;">项目协作约定速查</caption>
 <tr style="background:#1a1a1a;color:#fff;">
 <th style="padding:7px 14px;border:1px solid #555;text-align:left;font-width:34%;">约定项</th>
 <th style="padding:7px 14px;border:1px solid #555;text-align:left;width:66%;">说明</th>
@@ -828,7 +828,7 @@ HubView(QWidget)
 </tr>
 <tr>
 <td style="padding:7px 14px;border:1px solid #ccc;font-weight:bold;color:#b00;">架构约束</td>
-<td style="padding:7px 14px;border:1px solid #ccc;">禁止 UI 层直接实例化 Session · 所有写操作通过 DB 类接口</td>
+<td style="padding:7px 14px;border:1px solid #ccc;">禁止 UI 区直接实例化 Session · 所有写操作通过 DB 类接口</td>
 </tr>
 <tr style="background:#f5f5f5;">
 <td style="padding:7px 14px;border:1px solid #ccc;font-weight:bold;">依赖管理</td>
@@ -878,7 +878,7 @@ python tests/mainwindow_regression_suite.py
 - [x] 甘特图 / 看板 / 分析 Hub 三视图
 - [x] 自动 schema 迁移与历史库兼容
 - [x] 三套主题系统（深色/浅色/日出）
-- [x] 父子层级缩进甘特图自绘
+- [x] 父子区级缩进甘特图自绘
 - [x] 专注计时器 `tracked_minutes`
 
 </td>
@@ -963,7 +963,7 @@ python src/main.py
 |:---:|:---|:---|
 | 应用启动 | [`src/main.py`](src/main.py) | 8 步启动序列 + 主题装配 |
 | 主窗口路由 | [`src/MainWindow.py`](src/MainWindow.py) | 视图切换 + 提醒调度 + 内存索引重建 |
-| 数据访问层 | [`src/DB.py`](src/DB.py) | 所有数据操作的 SSOT，唯一写入通道 |
+| 数据访问区 | [`src/DB.py`](src/DB.py) | 所有数据操作的 SSOT，唯一写入通道 |
 | 任务 ORM | [`src/Task.py`](src/Task.py) | 19 字段 + 自引用 DAG 关系定义 |
 | 便签 ORM | [`src/Note.py`](src/Note.py) | 6 字段便签实体 |
 | 任务编辑器 | [`src/ui/task_composer.py`](src/ui/task_composer.py) | `TaskEditorView` + `set_context()` + `payload()` |
@@ -1003,4 +1003,5 @@ python src/main.py
 [![MIT License](https://img.shields.io/badge/License-MIT-F7DF1E?style=flat-square)](LICENSE)
 
 </div>
+
 
