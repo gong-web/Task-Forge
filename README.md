@@ -387,7 +387,9 @@ $$\Delta T = T_{\text{actual}} - \hat{T}$$
 
 **截止与提醒时间约束：**
 
-$$t_{\text{remind}} \leq t_{\text{due}}, \quad \text{由 } \texttt{\_sync\_reminder\_constraints()} \text{ 实时强制执行}$$
+$$t_{\text{remind}} \leq t_{\text{due}}$$
+
+由 `_sync_reminder_constraints()` 实时校验并自动修正。
 
 ### Note 实体（6 字段）
 
